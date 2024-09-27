@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vicsek Model Simulation</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="simulation">
+      <h1>Vicsek Model Simulation</h1>
+      <canvas id="simulationCanvas" width="600" height="600"></canvas>
+      <canvas id="colorWheel" width="50" height="50"></canvas>
+      <div id="simulationInfo"></div>
+      <button type="button" id="clearButton">Clear</button>
+    </div>
+    <div class="parameters">
+      <h2>Parameters</h2>
+      <form>
+        <label for="numParticles">Number of Particles:</label>
+        <input type="number" id="numParticles" name="numParticles" value="100"><br>
+
+        <label for="interactionRadius">Interaction Radius:</label>
+        <input type="number" id="interactionRadius" name="interactionRadius" step="0.1" value="1"><br>
+
+        <label for="noiseLevel">Noise Level (0 to 1):</label>
+        <input type="number" id="noiseLevel" name="noiseLevel" min="0" max="1" step="0.01" value="0.1"><br>
+
+        <button type="button" id="startButton">Start</button>
+        <button type="button" id="stopButton">Stop</button>
+      </form>
+    </div>
+  </div>
+  <script src="simulation.js"></script>
+</body>
+</html>

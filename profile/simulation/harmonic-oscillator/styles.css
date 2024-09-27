@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    display: flex;
+  }
+  
+  .simulation {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .parameters {
+    width: 300px;
+    padding: 20px;
+    background-color: #f0f0f0;
+  }
+  
+  h1, h2 {
+    text-align: center;
+  }
+  
+  canvas {
+    display: block;
+    margin: 0 auto;
+    border: 1px solid black;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-bottom: 5px;
+  }
+  
+  input {
+    margin-bottom: 10px;
+  }
+  
+  button {
+    font-size: 16px;
+    padding: 10px 20px;
+    margin-top: 10px;
+  }

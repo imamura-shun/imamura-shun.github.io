@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Harmonic Oscillator Simulation</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="simulation">
+      <h1>Harmonic Oscillator Simulation</h1>
+      <canvas id="simulationCanvas" width="600" height="600"></canvas>
+    </div>
+    <div class="parameters">
+      <h2>Parameters</h2>
+      <form>
+        <label for="springConstant">Spring Constant (k):</label>
+        <input type="number" id="springConstant" name="springConstant" step="0.1" value="0.1"><br>
+
+        <label for="mass">Mass (m):</label>
+        <input type="number" id="mass" name="mass" step="0.1" value="10"><br>
+
+        <label for="damping">Damping Coefficient:</label>
+        <input type="number" id="damping" name="damping" step="0.01" value="0.1"><br>
+
+        <label for="temperature">Temperature (T):</label>
+        <input type="number" id="temperature" name="temperature" step="0.1" value="1"><br>
+
+        <label for="initialPositionX">Initial Position (X):</label>
+        <input type="number" id="initialPositionX" name="initialPositionX" value="300"><br>
+
+        <label for="initialPositionY">Initial Position (Y):</label>
+        <input type="number" id="initialPositionY" name="initialPositionY" value="200"><br>
+
+        <label for="initialVelocityX">Initial Velocity (X):</label>
+        <input type="number" id="initialVelocityX" name="initialVelocityX" value="10"><br>
+
+        <label for="initialVelocityY">Initial Velocity (Y):</label>
+        <input type="number" id="initialVelocityY" name="initialVelocityY" value="0"><br>
+
+        <button type="button" id="startButton">Start</button>
+        <button type="button" id="stopButton">Stop</button>
+      </form>
+    </div>
+  </div>
+  <script src="simulation.js"></script>
+</body>
+</html>

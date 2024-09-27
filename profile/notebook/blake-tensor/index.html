@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Site</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Language Switcher -->
+    <div class="language-switcher">
+        <button id="en-btn">English</button>
+        <button id="ja-btn">日本語</button>
+    </div>
+
+    <!-- Navigation menu -->
+    <button id="toggle-menu">
+        ☰ Menu
+        <nav id="navbar" class="collapsible">
+            <ul>
+                <li><a href="#about-us" data-lang="menu-about-us">About Us</a></li>
+                <li><a href="#cv" data-lang="menu-cv">CV</a></li>
+                <li><a href="#simulation" data-lang="menu-simulation">Simulation</a></li>
+                <li><a href="#notebook" data-lang="menu-notebook">Notebook</a></li>
+                <li><a href="#privacy-policy" data-lang="menu-privacy-policy">Privacy Policy</a></li>
+            </ul>
+        </nav>
+    </button>
+
+    <!-- Header -->
+    <header>
+        <h1 data-lang="page-title">Imamura's profile</h1>
+        <p data-lang="page-subtitle">Welcome to Shun Imamura's webpage</p>
+    </header>
+    
+    <p>Here is the derivation of J.R.Blake's work in 1971, focusing on calculating Green's functions for velocity and pressure fields near interfaces (assumed always flat) between a gas (assumed ideal gas) and an incompressible viscous fluid. The method involves:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list {"ordered":true} -->
+<ol><!-- wp:list-item -->
+<li>Setting boundary conditions at the interface</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Using the mirror image method to place opposite forces symmetrically across the interface, with correction terms</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Solving the fluid equations via Fourier transform to get a special solution with unknown coefficients</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Determining constraints on the correction terms to satisfy boundary conditions</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Finding the special solution coefficients from boundary conditions</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Inverse Fourier transforming the special solution back to real space</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Obtaining the Green's functions</li>
+<!-- /wp:list-item --></ol>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>The mirror image method simplifies the calculations. Though perhaps not strictly necessary, it was an innovative technique introduced by Blake to make the problem more tractable. <br /><br />
+    <a href="https://imashroom.com/paper/thesis/master/MasterThesis_20180215.pdf">PDF</a> (Japanese only)
+    <br /><br />Original：<br />Blake, J. R. “A Note on the Image System for a Stokeslet in a No-Slip Boundary.” <i>Mathematical Proceedings of the Cambridge Philosophical Society</i> 70, no. 2 (1971): 303–10. 
+    <a href="https://doi.org/10.1017/S0305004100049902">https://doi.org/10.1017/S0305004100049902</a>.</p>
+
+</body>
+</html>

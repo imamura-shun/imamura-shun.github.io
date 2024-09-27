@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Compound and Simple Interest Calculation Simulation</title>
+ <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+ <div class="container">
+   <div class="simulation">
+     <h1>Compound and Simple Interest Calculation Simulation</h1>
+     <div id="chart-container">
+       <canvas id="chart" width="800" height="400"></canvas>
+     </div>
+   </div>
+   <div class="parameters">
+     <h2>Parameters</h2>
+     <div class="input-container">
+       <div class="input-section">
+         <h3>Compound Interest Input Form</h3>
+         <div class="input-field">
+           <label for="principalCompound">Principal (10,000 yen):</label>
+           <input type="number" id="principalCompound" value="100">
+         </div>
+         <div class="input-field">
+           <label for="interestRateCompound">Interest Rate (%):</label>
+           <input type="number" id="interestRateCompound" step="0.01" value="5">
+         </div>
+       </div>
+       
+       <div class="input-section">
+         <h3>Simple Interest Input Form</h3>
+         <div class="input-field">
+           <label for="principalSimple">Principal (10,000 yen):</label>
+           <input type="number" id="principalSimple" value="100">
+         </div>
+         <div class="input-field">
+           <label for="interestRateSimple">Interest Rate (%):</label>
+           <input type="number" id="interestRateSimple" step="0.01" value="5">
+         </div>
+       </div>
+       
+       <div class="input-section">
+         <h3>Maximum Number of Years to Plot</h3>
+         <div class="input-field">
+           <label for="maxYears">Maximum Years:</label>
+           <input type="number" id="maxYears" value="10">
+         </div>
+       </div>
+       
+       <button type="button" onclick="calculateAndPlot()">Calculate and Plot</button>
+     </div>
+   </div>
+ </div>
+ 
+ <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+ <script src="script.js"></script>
+</body>
+</html>
