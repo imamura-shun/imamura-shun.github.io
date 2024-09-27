@@ -18,10 +18,6 @@ const options = {
     threshold: 0.1,
 };
 
-sections.forEach(section => {
-    observer.observe(section);
-});
-
 const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -31,31 +27,49 @@ const observer = new IntersectionObserver((entries, observer) => {
     });
 }, options);
 
+sections.forEach(section => {
+    observer.observe(section);
+});
 
-// Extend the translations
-translations.en['cv-name'] = "Name: Shun Imamura";
-translations.en['cv-contact'] = "Contact";
-translations.en['cv-education'] = "Education";
-translations.en['cv-employment'] = "Employment";
-translations.en['cv-publications'] = "Publications";
-translations.en['cv-presentations'] = "Presentations";
-translations.en['cv-skills'] = "Skills";
-translations.en['cv-languages'] = "Language Skills";
-translations.en['cv-memberships'] = "Memberships";
-translations.en['cv-hobbies'] = "Hobbies";
-
-// Add Japanese translations
-translations.ja['cv-name'] = "氏名: 今村 舜";
-translations.ja['cv-contact'] = "連絡先";
-translations.ja['cv-education'] = "学歴";
-translations.ja['cv-employment'] = "職歴";
-translations.ja['cv-publications'] = "出版物";
-translations.ja['cv-presentations'] = "発表";
-translations.ja['cv-skills'] = "スキル";
-translations.ja['cv-languages'] = "言語スキル";
-translations.ja['cv-memberships'] = "会員";
-translations.ja['cv-hobbies'] = "趣味";
-
+// Text content for English and Japanese
+const translations = {
+    en: {
+        'page-title': "Imamura's profile",
+        'page-subtitle': "Welcome to Shun Imamura's webpage",
+        'about-us': 'About Us',
+        'biography': 'Biography',
+        'bio-content': 'We obtained a Ph.D. in Science at Tohoku University and have primarily been engaged in the development of mathematical models and simulations based on the principles of physics...',
+        'vision': 'Vision',
+        'vision-content': 'As participants in shaping the future, we contemplate what happiness truly means for humanity...',
+        'policy': 'Policy',
+        'policy-content': 'We humbly contribute to society, starting with small steps within our capabilities...',
+        'proper-use': 'Proper Use of Science',
+        'proper-use-content': 'Recognizing that reproducibility is a hallmark of science, we provide reproducible information.',
+        'menu-about-us': "About us",
+        'menu-cv': "CV",
+        'menu-simulation': "Simulation",
+        'menu-notebook': "Notebook",
+        'menu-privacy-policy': "Privacy Policy",
+    },
+    ja: {
+        'page-title': 'プロフィール',
+        'page-subtitle': 'ウェブページへようこそ',
+        'about-us': '私たちについて',
+        'biography': '経歴',
+        'bio-content': '私たちは東北大学で理学博士号を取得し、主に物理学の原理に基づいた数理モデルとシミュレーションの開発に従事してきました...',
+        'vision': 'ビジョン',
+        'vision-content': '未来を形作る一員として、私たちは人類にとって本当の幸せとは何かを考えています...',
+        'policy': '方針',
+        'policy-content': '私たちは、自分たちのできる範囲で小さな一歩から社会に貢献します...',
+        'proper-use': '科学の適正利用',
+        'proper-use-content': '再現性は科学の特徴であることを認識し、再現可能な情報を提供します。',
+        'menu-about-us': "About us",
+        'menu-cv': "CV",
+        'menu-simulation': "Simulation",
+        'menu-notebook': "Notebook",
+        'menu-privacy-policy': "Privacy Policy",
+    }
+};
 
 // Function to switch languages
 function switchLanguage(lang) {
