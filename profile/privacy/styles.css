@@ -133,3 +133,9 @@ footer {
 #cv ul li {
     margin-bottom: 10px;
 }
+
+.wp-block-heading {
+    margin-top: 20px;
+    color: white;
+    background-color: black;
+}
