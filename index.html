@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Site</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Language Switcher -->
+    <div class="language-switcher">
+        <button id="en-btn">English</button>
+        <button id="ja-btn">日本語</button>
+    </div>
+
+    <!-- Navigation menu -->
+    <button id="toggle-menu">☰ Menu
+        <nav id="navbar" class="collapsible">
+            <ul>
+                <li><a href="./profile/about/index.html" data-lang="menu-about-us">About Us</a></li>
+                <li><a href="./profile/cv/index.html" data-lang="menu-cv">CV</a></li>
+                <li><a href="./profile/simulation/index.html" data-lang="menu-simulation">Simulation</a></li>
+                <li><a href="./profile/notebook/index.html" data-lang="menu-notebook">Notebook</a></li>
+                <li><a href="./profile/privacy/index.html" data-lang="menu-privacy-policy">Privacy</a></li>
+            </ul>
+        </nav>
+    </button>
+
+    <!-- Header -->
+    <header>
+        <h1 data-lang="page-title">Imamura's profile</h1>
+        <p data-lang="page-subtitle">Welcome to Shun Imamura's webpage</p>
+    </header>
+
+    <h3 data-lang="about-us">About Us</h3>
+        <nav>
+            <ul>
+                <li><a href="#biography" data-lang="biography">Biography</a></li>
+                <li><a href="#vision" data-lang="vision">Vision</a></li>
+                <li><a href="#policy" data-lang="policy">Policy</a></li>
+                <li><a href="#proper-use" data-lang="proper-use">Proper Use of Science</a></li>
+            </ul>
+        </nav>
+    
+
+    <!-- Content -->
+    <main>
+        <section id="biography">
+            <h2  data-lang="biography">Biography</h2>
+            <p data-lang="bio-content">We obtained a Ph.D. in Science at Tohoku University and have primarily been engaged in the development of mathematical models and simulations based on the principles of physics. We developed an interest in programming through games and entered a National College of Technology. For our graduation research, we conducted simulations of passive walking models. We developed a keen interest in the phenomena of nonlinear and non-equilibrium systems, as well as the fundamental principles of physics such as variational principles, conservation laws, and symmetry. At university, we majored in physics and learned the basics of mathematical modeling to describe complex phenomena using symmetry and conservation laws. Our recent research has mainly focused on active matter (objects with self-propulsion mechanisms), from modeling their motion mechanisms to simulating their collective systems.</p>
+        </section>
+
+        <section id="vision">
+            <h2 data-lang="vision">Vision</h2>
+            <p data-lang="vision-content">As participants in shaping the future, we contemplate what happiness truly means for humanity. In the current era marked by the 4th Industrial Revolution (rapid advancements in AI, cryptocurrencies, etc.), we earnestly confront energy and environmental challenges. In this VUCA (Volatile, Uncertain, Complex, Ambiguous) era, we strive to rectify issues such as poverty and inequality.</p>
+        </section>
+
+        <section id="policy">
+            <h2 data-lang="policy">Policy</h2>
+            <p data-lang="policy-content">We humbly contribute to society, starting with small steps within our capabilities. Throughout our lives, we commit to continuous learning and creation.</p>
+        </section>
+
+        <section id="proper-use">
+            <h2 data-lang="proper-use">Proper Use of Science</h2>
+            <p data-lang="proper-use-content">Recognizing that reproducibility is a hallmark of science, we provide reproducible information.</p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Profile Site. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
