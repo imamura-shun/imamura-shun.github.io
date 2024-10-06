@@ -41,6 +41,7 @@
     display: block;
     margin: 10px auto;
     position: fixed;
+    text-align: left;
 }
 
 #toggle-menu:hover {

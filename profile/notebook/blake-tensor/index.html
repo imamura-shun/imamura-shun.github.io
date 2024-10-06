@@ -15,15 +15,14 @@
     </div>
 
     <!-- Navigation menu -->
-    <button id="toggle-menu">
-        ☰ Menu
+    <button id="toggle-menu">☰ Menu
         <nav id="navbar" class="collapsible">
             <ul>
-                <li><a href="#about-us" data-lang="menu-about-us">About Us</a></li>
-                <li><a href="#cv" data-lang="menu-cv">CV</a></li>
-                <li><a href="#simulation" data-lang="menu-simulation">Simulation</a></li>
-                <li><a href="#notebook" data-lang="menu-notebook">Notebook</a></li>
-                <li><a href="#privacy-policy" data-lang="menu-privacy-policy">Privacy Policy</a></li>
+                <li><a href="./../../about/index.html" data-lang="menu-about-us">About Us</a></li>
+                <li><a href="./../../cv/index.html" data-lang="menu-cv">CV</a></li>
+                <li><a href="./../../simulation/index.html" data-lang="menu-simulation">Simulation</a></li>
+                <li><a href="./../../notebook/index.html" data-lang="menu-notebook">Notebook</a></li>
+                <li><a href="./../../privacy/index.html" data-lang="menu-privacy-policy">Privacy</a></li>
             </ul>
         </nav>
     </button>
@@ -34,44 +33,50 @@
         <p data-lang="page-subtitle">Welcome to Shun Imamura's webpage</p>
     </header>
     
-    <p>Here is the derivation of J.R.Blake's work in 1971, focusing on calculating Green's functions for velocity and pressure fields near interfaces (assumed always flat) between a gas (assumed ideal gas) and an incompressible viscous fluid. The method involves:</p>
-<!-- /wp:paragraph -->
+    <main>
+        <p>Here is the derivation of J.R.Blake's work in 1971, focusing on calculating Green's functions for velocity and pressure fields near interfaces (assumed always flat) between a gas (assumed ideal gas) and an incompressible viscous fluid. The method involves:</p>
+    <!-- /wp:paragraph -->
 
-<!-- wp:list {"ordered":true} -->
-<ol><!-- wp:list-item -->
-<li>Setting boundary conditions at the interface</li>
-<!-- /wp:list-item -->
+    
+    <style>
+        .styled-list {
+            margin: 10px 10px 20px 10px;
+            padding: 10px 10px 10px 30px;
+            background-color: #f9f9f9;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+    </style>
+    
+    <div class="styled-list">
+        <ol>
+            <li>Setting boundary conditions at the interface</li>
+            <li>Using the mirror image method to place opposite forces symmetrically across the interface, with correction terms</li>
+            <li>Solving the fluid equations via Fourier transform to get a special solution with unknown coefficients</li>
+            <li>Determining constraints on the correction terms to satisfy boundary conditions</li>
+            <li>Finding the special solution coefficients from boundary conditions</li>
+            <li>Inverse Fourier transforming the special solution back to real space</li>
+            <li>Obtaining the Green's functions</li>
+        </ol>
+    </div>    
 
-<!-- wp:list-item -->
-<li>Using the mirror image method to place opposite forces symmetrically across the interface, with correction terms</li>
-<!-- /wp:list-item -->
-
-<!-- wp:list-item -->
-<li>Solving the fluid equations via Fourier transform to get a special solution with unknown coefficients</li>
-<!-- /wp:list-item -->
-
-<!-- wp:list-item -->
-<li>Determining constraints on the correction terms to satisfy boundary conditions</li>
-<!-- /wp:list-item -->
-
-<!-- wp:list-item -->
-<li>Finding the special solution coefficients from boundary conditions</li>
-<!-- /wp:list-item -->
-
-<!-- wp:list-item -->
-<li>Inverse Fourier transforming the special solution back to real space</li>
-<!-- /wp:list-item -->
-
-<!-- wp:list-item -->
-<li>Obtaining the Green's functions</li>
-<!-- /wp:list-item --></ol>
-<!-- /wp:list -->
-
-<!-- wp:paragraph -->
-<p>The mirror image method simplifies the calculations. Though perhaps not strictly necessary, it was an innovative technique introduced by Blake to make the problem more tractable. <br /><br />
-    <a href="https://imashroom.com/paper/thesis/master/MasterThesis_20180215.pdf">PDF</a> (Japanese only)
-    <br /><br />Original：<br />Blake, J. R. “A Note on the Image System for a Stokeslet in a No-Slip Boundary.” <i>Mathematical Proceedings of the Cambridge Philosophical Society</i> 70, no. 2 (1971): 303–10. 
+    <!-- wp:paragraph -->
+    <p>The mirror image method simplifies the calculations. Though perhaps not strictly necessary, it was an innovative technique introduced by Blake to make the problem more tractable. <br /><br />
+    <a href="./../../paper/thesis/master/MasterThesis_20180215.pdf">PDF</a> (Japanese only)
+    <br /><br />
+    Original paper:
+    <br />
+    Blake, J. R. “A Note on the Image System for a Stokeslet in a No-Slip Boundary.”
+    <i>Mathematical Proceedings of the Cambridge Philosophical Society</i>
+    70, no. 2 (1971): 303-10. 
     <a href="https://doi.org/10.1017/S0305004100049902">https://doi.org/10.1017/S0305004100049902</a>.</p>
+    </main>
 
+<!-- Footer -->
+<footer>
+    <p>&copy; 2024 Profile Site. All Rights Reserved.</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>

@@ -18,10 +18,6 @@ const options = {
     threshold: 0.1,
 };
 
-sections.forEach(section => {
-    observer.observe(section);
-});
-
 const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -31,31 +27,31 @@ const observer = new IntersectionObserver((entries, observer) => {
     });
 }, options);
 
+sections.forEach(section => {
+    observer.observe(section);
+});
 
-// Extend the translations
-translations.en['cv-name'] = "Name: Shun Imamura";
-translations.en['cv-contact'] = "Contact";
-translations.en['cv-education'] = "Education";
-translations.en['cv-employment'] = "Employment";
-translations.en['cv-publications'] = "Publications";
-translations.en['cv-presentations'] = "Presentations";
-translations.en['cv-skills'] = "Skills";
-translations.en['cv-languages'] = "Language Skills";
-translations.en['cv-memberships'] = "Memberships";
-translations.en['cv-hobbies'] = "Hobbies";
-
-// Add Japanese translations
-translations.ja['cv-name'] = "氏名: 今村 舜";
-translations.ja['cv-contact'] = "連絡先";
-translations.ja['cv-education'] = "学歴";
-translations.ja['cv-employment'] = "職歴";
-translations.ja['cv-publications'] = "出版物";
-translations.ja['cv-presentations'] = "発表";
-translations.ja['cv-skills'] = "スキル";
-translations.ja['cv-languages'] = "言語スキル";
-translations.ja['cv-memberships'] = "会員";
-translations.ja['cv-hobbies'] = "趣味";
-
+// Text content for English and Japanese
+const translations = {
+    en: {
+        'page-title': "Imamura's profile",
+        'page-subtitle': "Welcome to Shun Imamura's webpage",
+        'menu-about-us': "About us",
+        'menu-cv': "CV",
+        'menu-simulation': "Simulation",
+        'menu-notebook': "Notebook",
+        'menu-privacy-policy': "Privacy Policy",
+    },
+    ja: {
+        'page-title': 'プロフィール',
+        'page-subtitle': 'ウェブページへようこそ',
+        'menu-about-us': "About us",
+        'menu-cv': "CV",
+        'menu-simulation': "Simulation",
+        'menu-notebook': "Notebook",
+        'menu-privacy-policy': "Privacy Policy",
+    }
+};
 
 // Function to switch languages
 function switchLanguage(lang) {
