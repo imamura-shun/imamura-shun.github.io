@@ -36,6 +36,7 @@ const translations = {
     en: {
         'page-title': "Imamura's profile",
         'page-subtitle': "Welcome to Shun Imamura's webpage",
+        'menu-top': "Top",
         'menu-about-us': "About us",
         'menu-cv': "CV",
         'menu-simulation': "Simulation",
@@ -45,6 +46,7 @@ const translations = {
     ja: {
         'page-title': 'プロフィール',
         'page-subtitle': 'ウェブページへようこそ',
+        'menu-top': "Top",
         'menu-about-us': "About us",
         'menu-cv': "CV",
         'menu-simulation': "Simulation",
