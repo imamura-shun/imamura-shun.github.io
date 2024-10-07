@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Site</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="stylesheet" href="./../../../katex/katex.min.css">
+    <script defer src="./../../../katex/katex.min.js"></script>
+    <script defer src="./../../../katex/contrib/auto-render.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "\\[", right: "\\]", display: true},
+            {left: "$", right: "$", display: false},
+            {left: "\\(", right: "\\)", display: false}
+          ]
+        });
+      });
+    </script>
+</head>
+<body>
+
+    <!-- Language Switcher -->
+    <div class="language-switcher">
+        <button id="en-btn">English</button>
+        <button id="ja-btn">日本語</button>
+    </div>
+
+    <!-- Navigation menu -->
+    <button id="toggle-menu">☰ Menu
+        <nav id="navbar" class="collapsible">
+            <ul>
+                <li><a href="./../../about/index.html" data-lang="menu-about-us">About Us</a></li>
+                <li><a href="./../../cv/index.html" data-lang="menu-cv">CV</a></li>
+                <li><a href="./../../simulation/index.html" data-lang="menu-simulation">Simulation</a></li>
+                <li><a href="./../../notebook/index.html" data-lang="menu-notebook">Notebook</a></li>
+                <li><a href="./../../privacy/index.html" data-lang="menu-privacy-policy">Privacy</a></li>
+            </ul>
+        </nav>
+    </button>
+
+    <!-- Header -->
+    <header>
+        <h1 data-lang="page-title">Imamura's profile</h1>
+        <p data-lang="page-subtitle">Welcome to Shun Imamura's webpage</p>
+    </header>
+    
+    <main>
+        <h1>Nondimensionalization</h1>
+    <!-- /wp:paragraph -->
+
+    
+    <style>
+        .styled-list {
+            margin: 10px 10px 20px 10px;
+            padding: 10px 10px 10px 30px;
+            background-color: #f9f9f9;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+    </style>
+    
+    <div class="styled-list">
+        <ol>
+            <li>Pay attention to the variables in the equation to be transformed.</li>
+            <li>For each variable, identify the reference quantity for each dimension and present the equation with the reference quantities explicitly stated.
+                For example, $t \to t T_{0}$. Only add a tilde to the non-dimensionalized variables.</li>
+            <li>Gather the coefficients of each term and set appropriate reference quantities to make the coefficients equal to 1. At this point, set the reference quantities as fixed constants. Do not set values that can take a wide range and serve as good parameters, other than variables, as reference quantities. (In other words, use physical constants that are fixed from the beginning or constants that do not need to be changed as reference quantities.)</li>
+            <li>Add a mark, such as a tilde, to the transformed variables.</li>
+            <li>For fixed values other than the reference quantities, replace them if possible. However, in this case, do not add a tilde or other marks. Distinguish them from variables by using different characters or other appropriate measures.</li>
+        </ol>
+    </div>    
+
+    </main>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2024 Profile Site. All Rights Reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

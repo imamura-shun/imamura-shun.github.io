@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Site</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="stylesheet" href="./../../../katex/katex.min.css">
+    <script defer src="./../../../katex/katex.min.js"></script>
+    <script defer src="./../../../katex/contrib/auto-render.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "\\[", right: "\\]", display: true},
+            {left: "$", right: "$", display: false},
+            {left: "\\(", right: "\\)", display: false}
+          ]
+        });
+      });
+    </script>
+</head>
+<body>
+
+    <!-- Language Switcher -->
+    <div class="language-switcher">
+        <button id="en-btn">English</button>
+        <button id="ja-btn">日本語</button>
+    </div>
+
+    <!-- Navigation menu -->
+    <button id="toggle-menu">☰ Menu
+        <nav id="navbar" class="collapsible">
+            <ul>
+                <li><a href="./../../about/index.html" data-lang="menu-about-us">About Us</a></li>
+                <li><a href="./../../cv/index.html" data-lang="menu-cv">CV</a></li>
+                <li><a href="./../../simulation/index.html" data-lang="menu-simulation">Simulation</a></li>
+                <li><a href="./../../notebook/index.html" data-lang="menu-notebook">Notebook</a></li>
+                <li><a href="./../../privacy/index.html" data-lang="menu-privacy-policy">Privacy</a></li>
+            </ul>
+        </nav>
+    </button>
+
+    <!-- Header -->
+    <header>
+        <h1 data-lang="page-title">Imamura's profile</h1>
+        <p data-lang="page-subtitle">Welcome to Shun Imamura's webpage</p>
+    </header>
+    
+    <main>
+        <h2>Notebook: Compound and simple interests</h2>
+    <!-- /wp:paragraph -->
+    <p>News reports have been talking about the Bank of Japan lifting negative interest rates, and the interest rates on ordinary deposits at major banks increasing by 20 times to an annual rate of 0.02%.</p>
+    <p>Here, we want to study together the benefits of compound interest.</p>
+    <p>The latter half may be a bit difficult, but to understand it, I recommend substituting specific numbers and drawing graphs. At the end, there is a simulation you can try out.</p>
+
+    <h3>What are simple and compound interest?</h3>
+
+    <p>
+        Simple and compound interest accumulate over certain periods. (What is generated from the original amount is reinvested!)
+        For example, let’s look at daily meals from the perspective of simple and compound interest.
+    </p>
+    <p>Assume you eat three meals a day, breakfast, lunch, and dinner. Then, after a month, you will have eaten about 100 meals, and after a year, about 1000 meals. So, how many meals will you have eaten after 10 years?</p>
+    <p>In this way, accumulation creates large values. With meals, we saw that the habitual accumulation of three meals a day amounts to a large number of times when viewed in terms of years. The same can be said for studying, sports, and money.</p>
+    <p>Some people may think, “Of course, you do it every day. Isn’t that obvious?”</p>
+    <p>But do you have any memories of being moved by doing something for the first time, or of growth and experiences that stayed with you?</p>
+    <p>For example, memories of being moved when eating a dish for the first time, memories of feeling the most growth when doing a sport for the first or second time, memories of your perspective changing when you realized, “Ah, so that’s how it is!” from studying something.</p>
+    <p>Doing something for the first time stays with you for a long time afterwards. You use that experience to grow even more. The fact that the experience of doing something for the first time has a lasting impact and leads to growth is what “compound interest” is all about.</p>
+    <p>The famous Moore’s Law is an expression of this compound interest. In the future, it is expected that AI development will lead to advancements and cost reductions in accordance with Moore’s Law in all areas.</p>
+
+    <ol class="reference-list"></ol>
+        <li>
+            <a href="https://moores.samaltman.com/" class="reference-link">**Moore’s Law for Everything** _We need to design a system that embraces this technological f_ _moores.samaltman.com_</a>
+        </li>
+        <li>
+            <a href="https://www.tel.co.jp/museum/magazine/report/202106/?section=4" class="reference-link">**The Past, Present, and Future of Moore’s Law Supporting the Development of the Semiconductor Industry | Science Report | TELESCOPE magazine** _In the future, 3D integration may reach its strength limit like high-rise buildings, and unless some extraordinary strategy emerges, Moore’s Law may come to an end. However…_ _www.tel.co.jp_(JAPANESE)</a>
+        </li>
+    </ol>
+
+    <p>
+        In contrast, there is “simple interest”. It progresses without reinvesting what is generated from the original amount. In other words, it’s like the meal example from earlier, or receiving only a certain value at regular intervals. (For example, wages for labor are very easy to understand. They are roughly a fixed amount for a certain period of time, right?)
+        I think the super rough image may have been confusing.
+        From here, I would like to explain simple and compound interest in more concrete terms. To do that, let’s use mathematical formulas to clarify this discussion. So, from now on, I will use money as a subject to explain the amazing power of “compound interest”.
+    </p>
+
+    <h3>Formulation of Compound Interest</h3>
+    <p>
+        Now, let’s explain using mathematical formulas. (If there are any calculation mistakes, please point them out.)
+        To gain a more intuitive understanding, please try plugging in specific numbers. For example, $M_0 = 1$ million yen, $c = 0.05$ (5%).
+        Let the principal be $M_0$ and the annual interest rate be $c$.
+        After 1 year, the increase is expressed as $cM_0$.
+        In other words, the new principal (total amount in the account) after 1 year is $M_{1} = (1+c) M_{0}$.
+        Similarly, the increase after 2 years is expressed as $cM_1$.
+        The new principal after 2 years is $M_2 = (1+c) M_1 = (1+c)^2 M_0$.
+        Repeating this, the increase after $n>1$ years is expressed as $cM_{n-1}$, and the new principal after $n$ years is $M_n = (1+c)^n M_0$.
+    </p>
+
+    <h3>Further Generalization of the Compound Interest Formula</h3>
+    
+    <p>
+        Now, let’s make this an even more practical formula. To do that, let’s generalize it further. We usually save a certain amount each month, right? Let’s consider this.
+    </p>
+    
+    <p>
+        Let’s assume that we invest an additional amount each year.
+        So, let’s consider that in the $k$-th year after starting the investment, we put the principal $M^{k}_{0}$ into savings.
+        Regarding the numbers, the superscript is the number of years since the start of the investment ($0$ to $n$), and the subscript is the number of years elapsed ($0$ to $n-k$).
+    </p>
+    
+    <p>
+        Now, if the principal at year $0$ is $M^{0}_{0}$, then after $n$ years it will be $M^{0}_{n} = (1+c)^{n} M^{0}_{0}$.
+        Let’s consider the savings added from $1$ year to $n$ years later.
+    </p>
+    
+    <p>
+        principal $M^{1}_{0}$ added $1$ year after the start of the investment will be $M^{1}_{n-1} = (1+c)^{n-1} M^{1}_{0}$ after $n$ years. 
+        The principal $M^{2}_{0}$ added $2$ years later will be $M^{2}_{n-2} = (1+c)^{n-2} M^{2}_{0}$ after n years.
+        Therefore, the principal $M^{k}_{0}$ added $k$ years later will be $M^{k}_{n-k} = (1+c)^{n-k} M^{k}_{0}$ after $n$ years.
+    </p> 
+    
+    <p>
+        From this, the total amount in the account after $n$ years when investing the principals $M^{0}_{0}$, $M^{1}_{0}$, ..., $M^{k}_{0}$, ..., $M^{n}_{0}$ annually from years $0$ to $n$ is
+    </p>
+    
+    \[ M_{0}^{n+1} = \sum_{k = 0}^{n} M^{k}_{n-k} = \sum_{k = 0}^{n} (1+c)^{n-k} M^{k}_{0}. \]
+    
+    <p>
+        For simplicity, let’s assume we invest the same amount each year. In other words, for all $k$, let $M^{k}_{0} = M$.
+    </p>
+    
+    <p>
+        In this case, the total amount in the account after $n$ years is $\sum_{k = 0}^{n} (1+c)^{n-k} M = \frac{(1+c)^{n+1} - 1}{c} M$. 
+        (This is a geometric series with first term $1$, common ratio $(1+c)$, and number of terms $(n+1)$.)
+    </p>
+    
+    <h5>
+        NOTE: Of course, in reality, the annual interest rate $c$ also fluctuates from year to year, so it should be described as ${c}^{k}$, but this makes the problem more complex and harder to understand compound interest. 
+        It is best to adopt a constant $c$ as an averaged annual interest rate.
+    </h5>
+    
+    <p>
+        Suppose you invest m each month. Then $M = 12 m$ holds.
+        How old are you now?
+        What will happen if you continue investing at an average annual interest rate of $c$ until n years from now?
+    </p>
+    
+    <p>
+        It’s frightening, but it’s clear that it’s good to make sound investments early on.
+    </p>
+    
+    <p>
+        Of course, this isn’t just about money. You can imagine that habitually doing something will produce great results in the future!
+    </p>
+
+    <h3>Comparison of Compound and Simple Interest</h3>
+
+    <p>
+        We’ve dealt with compound and simple interest.
+        (See the appendix below for how to calculate simple interest.)
+    </p>
+    
+    <p>
+        Let’s look at a graph to see how the differences actually arise.
+        (You can run this simulation from here.)
+    </p>
+    
+    <p>
+        It plots what happens after $n$ years when the principal $M$ is invested at an annual interest rate of $c$.
+        (In the graph, $M = 100$ (10,000 yen) and the annual interest rate $c = 5$ (%).)
+    </p>
+
+    <div  style="text-align: center;">
+        <img src="./graph-compound-interests.png" alt="graph of compound interest">
+    </div>   
+
+    <h5>Appendix: Simple Interest</h5>
+    <p>
+        Let’s briefly touch on the mathematical formula for simple interest as well.
+        Compound interest grows exponentially with time, but this is a simple linear function.
+        It’s something like $M_{n} = M_{0} + n S = (1+cn) M_{0}$.
+        The interpretation is that $S = c M_{0}$ is the annual income, $M_0$ is the principal (the amount originally held), and $n$ is the number of years elapsed.
+    </p>
+    
+    <h5>
+        NOTE: Compound interest is important, but…
+    </h5>
+    
+    <p>
+        Certainly, compound interest is important as discussed earlier, but if you focus on it and neglect consumption, it defeats the purpose.
+        I think it’s important to consume and invest at the right time in things that will generate good value for the future and become experiences.
+    </p>
+
+    </main>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2024 Profile Site. All Rights Reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
