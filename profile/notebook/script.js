@@ -45,7 +45,7 @@ const translations = {
     },
     ja: {
         'page-title': 'Imamuraのプロフィール',
-        'page-subtitle': 'Shun Imamuraのウェブページへようこそ',
+        'page-subtitle': 'ようこそ Shun Imamura のウェブページへ',
         'menu-top': "Top",
         'menu-about-us': "About us",
         'menu-cv': "CV",

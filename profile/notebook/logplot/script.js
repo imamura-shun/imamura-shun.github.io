@@ -43,8 +43,8 @@ const translations = {
         'menu-privacy-policy': "Privacy Policy",
     },
     ja: {
-        'page-title': 'プロフィール',
-        'page-subtitle': 'ウェブページへようこそ',
+        'page-title': 'Imamuraのプロフィール',
+        'page-subtitle': 'ようこそ Shun Imamura のウェブページへ',
         'menu-about-us': "About us",
         'menu-cv': "CV",
         'menu-simulation': "Simulation",
