@@ -53,8 +53,8 @@ const translations = {
         'menu-privacy-policy': "Privacy Policy",
     },
     ja: {
-        'page-title': 'プロフィール',
-        'page-subtitle': 'ウェブページへようこそ',
+        'page-title': 'Imamuraのプロフィール',
+        'page-subtitle': 'Shun Imamuraのウェブページへようこそ',
         'about-us': '私たちについて',
         'biography': '経歴',
         'bio-content': '私たちは東北大学で理学博士号を取得し、主に物理学の原理に基づいた数理モデルとシミュレーションの開発に従事してきました...',
