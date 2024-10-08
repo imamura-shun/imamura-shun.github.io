@@ -1,6 +1,6 @@
 # Hi there, I'm Shun Imamura.
 This is my profile page.
-https://imashgit.github.io/
+https://imamura-shun.github.io/
 
 # Biography
 Ph.D. in Science from Tohoku University, with a primary focus on developing mathematical models and simulations based on the principles of physics.
